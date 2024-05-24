@@ -1,6 +1,6 @@
 const audio = document.querySelector(".audio"),
   container = document.querySelector(".container"),
-  progressContainer = document.querySelector(".progress-container"),
+  progressContainer = document.querySelector(".progress__container"),
   progress = document.querySelector(".progress"),
   playBtn = document.querySelector(".play"),
   prevBtn = document.querySelector(".prev"),
@@ -89,7 +89,7 @@ const changeProgress = (e) => {
   }
 };
 const setProgress = (e) => {
-  const widthP = e.target.clientWidth;
+  const widthP = progressContainer.clientWidth;
   const clickX = e.offsetX;
   const duration = audio.duration;
 
