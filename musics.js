@@ -103,4 +103,4 @@ nextBtn.addEventListener("click", next);
 prevBtn.addEventListener("click", prev);
 rangeEl.addEventListener("input", changeValue);
 audio.addEventListener("timeupdate", changeProgress);
-progressContasiner.addEventListener("click", setProgress);
+progressContainer.addEventListener("click", setProgress);
