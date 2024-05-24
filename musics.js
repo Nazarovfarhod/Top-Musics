@@ -8,6 +8,8 @@ const audio = document.querySelector(".audio"),
   nextBtn = document.querySelector(".next"),
   rangeEl = document.querySelector(".range"),
   volumeValue = document.querySelector(".volume-value"),
+  currentTimeEl = document.querySelector(".current-time"),
+  durationEl = document.querySelector(".duration"),
   title = document.querySelector(".song");
 
 // content
@@ -96,6 +98,16 @@ const setProgress = (e) => {
   audio.currentTime = (clickX / widthP) * duration;
 };
 
+const formatTime = (time) => {
+  const minutes = Math.floor(time / 60);
+  const seconds = Math.floor(time % 60);
+  return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+};
+
+const updateDuration = () => {
+  durationEl.textContent = formatTime(audio.duration);
+};
+
 // events
 
 playBtn.addEventListener("click", play);
@@ -104,3 +116,4 @@ prevBtn.addEventListener("click", prev);
 rangeEl.addEventListener("input", changeValue);
 audio.addEventListener("timeupdate", changeProgress);
 progressContainer.addEventListener("click", setProgress);
+audio.addEventListener("loadedmetadata", updateDuration);
