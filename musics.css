@@ -102,3 +102,9 @@ span {
 .fa-solid {
   cursor: pointer;
 }
+
+.time {
+  display: flex;
+  gap: 315px;
+  margin-bottom: 3px;
+}
