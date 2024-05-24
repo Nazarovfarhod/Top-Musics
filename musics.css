@@ -90,6 +90,7 @@ span {
 .range {
   width: 200px;
   height: 5px;
+  accent-color: #2b3c5b;
 }
 
 .span-wrapper {
