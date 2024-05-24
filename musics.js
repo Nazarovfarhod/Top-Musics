@@ -89,7 +89,7 @@ const changeProgress = (e) => {
   }
 };
 const setProgress = (e) => {
-  const widthP = progressContainer.clientWidth;
+  const widthP = e.target.clientWidth;
   const clickX = e.offsetX;
   const duration = audio.duration;
 
