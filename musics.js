@@ -10,6 +10,7 @@ const audio = document.querySelector(".audio"),
   volumeValue = document.querySelector(".volume-value"),
   currentTimeEl = document.querySelector(".current-time"),
   durationEl = document.querySelector(".duration"),
+  voiseWrapper = document.querySelector(".voise__wrapper"),
   title = document.querySelector(".song");
 
 // content
@@ -25,6 +26,8 @@ const songs = [
   "Dj-sm-Dystinct-la-speed-up",
   "Adam_Zhurek",
   "Александр-Рыбак-Fairytale",
+  "Doniyor-Bekturdiyev-Qop-Qora",
+  "El-Shab-Arab-Wain-Meaady-(Remix)",
 ];
 
 let currentSong = 0;
@@ -37,12 +40,12 @@ const changeyMusic = (a) => {
 
 const playMusic = () => {
   container.classList.add("play");
-  playBtn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
+  playBtn.innerHTML = `<i class="fa-solid fa-pause controller"></i>`;
   audio.play();
 };
 const pauseMusic = () => {
   container.classList.remove("play");
-  playBtn.innerHTML = `<i class="fa-solid fa-play"></i>`;
+  playBtn.innerHTML = `<i class="fa-solid fa-play controller"></i>`;
   audio.pause();
 };
 
@@ -81,6 +84,13 @@ const changeValue = () => {
   audio.volume = rangeEl.value / 100;
   volumeValue.textContent = rangeEl.value;
 };
+
+// const changeVolume = () => {
+//   if (volumeValue.textContent == 80) {
+//     voiseWrapper.innerHTML.remove(<i class="fa-solid fa-volume-low"></i>);
+//     voiseWrapper.innerHTML.add(<i class="fa-solid fa-volume-high"></i>);
+//   }
+// };
 
 const changeProgress = (e) => {
   const currentTime = e.target.currentTime;
