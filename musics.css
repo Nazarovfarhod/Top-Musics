@@ -127,11 +127,13 @@ span {
 .range {
   width: 200px;
   height: 5px;
-  accent-color: #2b3c5b;
+  accent-color: #e4e9ed;
   transition: 0.3s;
+  opacity: 0.3  ;
 }
 
 .range:hover {
+  opacity: 1;
   transform: scale(1.02);
 }
 
@@ -161,4 +163,10 @@ span {
   display: flex;
   align-items: center;
   gap: 7px;
+}
+
+.input__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }

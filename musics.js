@@ -83,14 +83,14 @@ const prev = () => {
 const changeValue = () => {
   audio.volume = rangeEl.value / 100;
   volumeValue.textContent = rangeEl.value;
+  if (rangeEl.value == 0) {
+    voiseWrapper.innerHTML = `<i class="fa-solid fa-volume-xmark"></i>`;
+  } else if (rangeEl.value > 0 && rangeEl.value < 50) {
+    voiseWrapper.innerHTML = `<i class="fa-solid fa-volume-low"></i>  `;
+  } else if (rangeEl.value > 50) {
+    voiseWrapper.innerHTML = `<i class="fa-solid fa-volume-high"></i>`;
+  }
 };
-
-// const changeVolume = () => {
-//   if (volumeValue.textContent == 80) {
-//     voiseWrapper.innerHTML.remove(<i class="fa-solid fa-volume-low"></i>);
-//     voiseWrapper.innerHTML.add(<i class="fa-solid fa-volume-high"></i>);
-//   }
-// };
 
 const changeProgress = (e) => {
   const currentTime = e.target.currentTime;
