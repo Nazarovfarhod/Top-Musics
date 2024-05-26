@@ -12,6 +12,7 @@ const audio = document.querySelector(".audio"),
   durationEl = document.querySelector(".duration"),
   voiseWrapper = document.querySelector(".voise__wrapper"),
   speedEl = document.querySelectorAll(".speed"),
+  soSpeedEl = document.getElementById("soSpeed"),
   slowEl = document.getElementById("slow"),
   normalEl = document.getElementById("normal"),
   speederEl = document.getElementById("speeder"),
@@ -136,6 +137,9 @@ const snormalAudio = () => {
 const speederAudio = () => {
   audio.playbackRate = 1.5;
 };
+const soSpeedAudio = () => {
+  audio.playbackRate = 2;
+};
 
 // events
 
@@ -149,3 +153,4 @@ audio.addEventListener("loadedmetadata", updateDuration);
 slowEl.addEventListener("click", slowAudio);
 normalEl.addEventListener("click", snormalAudio);
 speederEl.addEventListener("click", speederAudio);
+soSpeedEl.addEventListener("click", soSpeedAudio);

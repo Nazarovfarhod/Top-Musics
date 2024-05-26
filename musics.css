@@ -114,9 +114,17 @@ img {
 .buttons-wrapper {
   display: flex;
   align-items: center;
-  gap: 45px;
+  gap: 20px;
   margin-bottom: 20px;
 }
+/*
+.fa-backward-fast {
+  margin-right: 15px;
+}
+
+.fa-play {
+  margin-right: 15px;
+} */
 
 .sound-wrapper {
   display: flex;
@@ -126,15 +134,13 @@ img {
 }
 
 .speed-audio {
-  margin-left: -50px;
+  margin-left: 5px;
 }
 
 .speed {
   width: 40px;
   background-color: transparent;
   border: none;
-  /* border-radius: 8px; */
-  /* padding: 5px; */
   font-weight: bold;
   cursor: pointer;
 
