@@ -11,6 +11,10 @@ const audio = document.querySelector(".audio"),
   currentTimeEl = document.querySelector(".current-time"),
   durationEl = document.querySelector(".duration"),
   voiseWrapper = document.querySelector(".voise__wrapper"),
+  speedEl = document.querySelectorAll(".speed"),
+  slowEl = document.getElementById("slow"),
+  normalEl = document.getElementById("normal"),
+  speederEl = document.getElementById("speeder"),
   title = document.querySelector(".song");
 
 // content
@@ -121,6 +125,18 @@ const updateDuration = () => {
   });
 };
 
+const slowAudio = () => {
+  audio.playbackRate = 0.75;
+};
+
+const snormalAudio = () => {
+  audio.playbackRate = 1;
+};
+
+const speederAudio = () => {
+  audio.playbackRate = 1.5;
+};
+
 // events
 
 playBtn.addEventListener("click", play);
@@ -130,3 +146,6 @@ rangeEl.addEventListener("input", changeValue);
 audio.addEventListener("timeupdate", changeProgress);
 progressContainer.addEventListener("click", setProgress);
 audio.addEventListener("loadedmetadata", updateDuration);
+slowEl.addEventListener("click", slowAudio);
+normalEl.addEventListener("click", snormalAudio);
+speederEl.addEventListener("click", speederAudio);
